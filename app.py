@@ -244,7 +244,7 @@ with st.sidebar:
     st.markdown("---")
     colA, colB = st.columns(2)
     with colA:
-        if st.button("🧹 Clear History", use_container_width=True):
+        if st.button(" Clear History", use_container_width=True):
             st.session_state.history = []
             st.success("History cleared.")
             st.rerun()
@@ -470,4 +470,5 @@ This project is a **machine learning classification** system that detects SMS sp
 """)
     st.write("**Live App:** https://sms-spam-detector-jyr2hkmsniafqmhrstysyw.streamlit.app/")
     st.write("**GitHub:** https://github.com/Becky-Omoro/sms-spam-detector")
+
 
