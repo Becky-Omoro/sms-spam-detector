@@ -217,7 +217,7 @@ def clean_words_for_freq(text: str):
 
 # ---------------- Sidebar ----------------
 with st.sidebar:
-    st.markdown("<h2 style='text-align:center;'>🚀 SMS SPAM DETECTOR</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align:center;'> SMS SPAM DETECTOR</h2>", unsafe_allow_html=True)
 
     total_predictions = len(st.session_state.history)
     spam_count = sum(1 for h in st.session_state.history if h["prediction"] == "spam")
@@ -229,11 +229,11 @@ with st.sidebar:
         st.metric("Spam Detected", spam_count)
 
     st.markdown("---")
-    st.markdown("### 📊 Project Overview")
-    st.write("🎯 **Task:** Classification (Spam vs Ham)")
-    st.write("🤖 **Model:** Naive Bayes + TF-IDF")
-    st.write("📌 **Metrics:** See evaluation in notebook/report")
-    st.write("⚡ **Response:** Real-time prediction")
+    st.markdown("###  Project Overview")
+    st.write(" **Task:** Classification (Spam vs Ham)")
+    st.write(" **Model:** Naive Bayes + TF-IDF")
+    st.write(" **Metrics:** See evaluation in notebook/report")
+    st.write(" **Response:** Real-time prediction")
 
     st.markdown("---")
     st.markdown("### 🔗 Links")
@@ -249,7 +249,7 @@ with st.sidebar:
             st.success("History cleared.")
             st.rerun()
     with colB:
-        if st.button("🎨 Theme", use_container_width=True):
+        if st.button(" Theme", use_container_width=True):
             st.session_state.theme = "dark" if st.session_state.theme == "light" else "light"
             st.rerun()
 
@@ -263,24 +263,24 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-tab1, tab2, tab3, tab4 = st.tabs(["🎯 Predict", "📊 Analytics", "📜 History", "ℹ️ About"])
+tab1, tab2, tab3, tab4 = st.tabs([" Predict", " Analytics", " History", " About"])
 
 # ---------------- Predict tab ----------------
 with tab1:
-    st.markdown("### 📝 Quick Test Messages")
+    st.markdown("###  Quick Test Messages")
     b1, b2, b3, b4 = st.columns(4)
 
     with b1:
-        if st.button("💰 Prize SPAM", use_container_width=True):
+        if st.button(" Prize SPAM", use_container_width=True):
             st.session_state.example = "CONGRATULATIONS! You've WON $1,000,000! Click http://bit.ly/claim-now to claim your prize TODAY!!!"
     with b2:
-        if st.button("🏦 Loan SPAM", use_container_width=True):
+        if st.button(" Loan SPAM", use_container_width=True):
             st.session_state.example = "URGENT: Low interest loans available! Get cash now! No credit check! Call 0800 123 4567 today!"
     with b3:
-        if st.button("👋 Normal HAM", use_container_width=True):
+        if st.button(" Normal HAM", use_container_width=True):
             st.session_state.example = "Hey Mom, just letting you know I'll be home for dinner around 7pm. Love you!"
     with b4:
-        if st.button("📅 Meeting HAM", use_container_width=True):
+        if st.button(" Meeting HAM", use_container_width=True):
             st.session_state.example = "Hi team, reminder about our meeting tomorrow at 10am. Please bring your reports."
 
     st.markdown("")
@@ -470,3 +470,4 @@ This project is a **machine learning classification** system that detects SMS sp
 """)
     st.write("**Live App:** https://sms-spam-detector-jyr2hkmsniafqmhrstysyw.streamlit.app/")
     st.write("**GitHub:** https://github.com/Becky-Omoro/sms-spam-detector")
+
